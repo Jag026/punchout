@@ -1,7 +1,7 @@
 class Player
     def initialize(name)
         @name = name
-        @health = 12
+        @health = 16
         @moves_arr = ["high", "mid", "low"]
     end
 

@@ -25,7 +25,7 @@ while p1.health > 0 && p2.health > 0
     puts 
     puts p2.health
     puts "Player 2 Health"
-    puts
+    puts "_______________"
 
     p p1.name + " Is the loser" if p1.health <= 0
     p p2.name + " Is the loser" if p2.health <= 0
