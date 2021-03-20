@@ -9,6 +9,10 @@ class Player
         @name
     end
 
+    def name=(str)
+        @name = str
+    end
+
     def health
         @health
     end

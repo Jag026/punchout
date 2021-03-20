@@ -4,6 +4,20 @@ require_relative "boxer"
 p1 = Player.new("bilbo")
 p2 = Player.new("computer")
 
+system("clear")
+puts "WELCOME TO"
+sleep(3)
+system("clear")
+puts "PUNCH OUT"
+sleep(3)
+system("clear")
+
+puts "What is your name?"
+name_select = gets.chomp.to_s
+p1.name=(name_select)
+sleep(2)
+puts "Welcome " + p1.name
+
 while p1.health > 0 && p2.health > 0
     p1_attack = p1.throw_punch
     p2_defense = p2.auto_defend
