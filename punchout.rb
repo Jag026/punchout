@@ -33,16 +33,17 @@ while p1.health > 0 && p2.health > 0
     puts "Player 2 Health"
     puts "_______________"
     sleep(2)
-    system("clear")
+    #system("clear")
 
     puts p1.name + " Pick Your Punch"
+    puts
     sleep(1)
     puts "Pick a number"
     puts "1: High"
     puts "2: Mid"
     puts "3: Low"
     p1_attack = p1.throw_punch
-    p2_defense = p2.auto_defend
+    p2_defense = p2.moves_arr[rand(2)]
     
     sleep(1)
     system("clear")
@@ -55,7 +56,7 @@ while p1.health > 0 && p2.health > 0
         puts "Oppenent take: " + damage.to_s
     else puts "Attack Missed: 0 Damage"
     end
-    sleep(2)
+    sleep(3)
     system("clear")
 
     puts "Your health: " 
@@ -66,21 +67,22 @@ while p1.health > 0 && p2.health > 0
     puts 
     puts "---------------"
     puts
-    system("clear")
+    #system("clear")
 
     puts p1.name + " Pick Your Defense"
+    puts
     sleep(1)
     puts "Pick a number"
     puts "1: High"
     puts "2: Mid"
     puts "3: Low"
-    p2_attack = p2.auto_punch
+    p2_attack = p2.moves_arr[rand(2)]
     p1_defense = p1.defend_punch
 
     sleep(1)
     system("clear")
-    puts "You selected: " + p1_attack.to_s
-    puts "Oppened defended: " + p2_defense.to_s
+    puts "You selected: " + p1_defense.to_s
+    puts "Oppened selected: " + p2_attack.to_s
     
     if p2_attack != p1_defense
         damage = p2.attack_amt
@@ -88,7 +90,7 @@ while p1.health > 0 && p2.health > 0
         puts "You take: " + damage.to_s
     else puts "Attack Missed: 0 Damage"
     end
-    sleep(2)
+    sleep(3)
     system("clear")
 
     puts "Your health: " 
@@ -99,10 +101,14 @@ while p1.health > 0 && p2.health > 0
     puts 
     puts "---------------"
     puts
-    system("clear")
+    #system("clear")
 
 
     p p1.name + " Is the loser" if p1.health <= 0
+    puts
+    puts
     p p2.name + " Is the loser" if p2.health <= 0
+    puts
+    puts
 end
 

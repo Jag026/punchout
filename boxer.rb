@@ -17,12 +17,16 @@ class Player
         @health
     end
 
+    def moves_arr
+        @moves_arr
+    end
+
     def lose_health(num)
         @health = @health - num
     end
 
     def attack_amt
-        return rand(5)
+        return rand(5) + 2
     end
 
     def throw_punch
@@ -59,4 +63,5 @@ class Player
        return @moves_arr[random_num]
     end
 end
+
 
